@@ -1,0 +1,25 @@
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+		System.out.println("Enter a string:");
+		Scanner sc=new Scanner(System.in);
+		String str=sc.next();
+		String reverse_str="";
+		int count=0;
+		for(int j=str.length()-1; j>=0 ; j--)
+		{
+		    reverse_str=reverse_str+str.charAt(j);
+		    if(str.charAt(j)=='a'||str.charAt(j)=='e'||str.charAt(j)=='i'||str.charAt(j)=='o'||str.charAt(j)=='u'||str.charAt(j)=='A'||str.charAt(j)=='E'||str.charAt(j)=='I'||str.charAt(j)=='O'||str.charAt(j)=='U')
+		        count++;
+		}
+		System.out.println("The reversed string is:");
+		for(int j=0;j<=reverse_str.length()-1;j++)
+		{
+		    System.out.print(reverse_str.charAt(j));
+		}
+		System.out.println();
+		System.out.println("The no. of vowels in the string is "+count);
+		sc.close();
+	}
+}
